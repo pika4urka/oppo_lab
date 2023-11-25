@@ -1,0 +1,25 @@
+@startuml
+ThemeOfWorks o-- Date
+Date : size_t day;
+Date : size_t month;
+Date : size_t year;
+
+
+Date : bool DateChecking();
+Date : void ReadingTheDate(std::istream& ist);
+Date : void DateOutput(std::ostream& out) const;
+
+Date : const size_t& get_day() const;
+Date : const size_t& get_month() const;
+Date : const size_t& get_year() const;
+
+ThemeOfWorks : std::string name;
+ThemeOfWorks : std::string topic;
+ThemeOfWorks : Date date;
+
+ThemeOfWorks : void OutputToTheConsole(std::ostream& out) const;
+ThemeOfWorks : void ReadingTheTopicAndName(std::istream& ist);
+ThemeOfWorks : const Date& get_date() const;
+ThemeOfWorks : const std::string& get_Name() const;
+ThemeOfWorks : const std::string& get_Theme() const;
+@enduml
